@@ -79,6 +79,7 @@
             <li class="active"><a href="/demo_war_exploded/coffee">Coffee</a></li>
             <li><a href="/demo_war_exploded/milktea">Milk Tea</a></li>
             <li><a href="/demo_war_exploded/fruittea">Fruit Tea</a></li>
+            <li><a href="/demo_war_exploded/agency?name=agency1">Agency</a></li>
         </ul>
         <form class="navbar-form navbar-right" action="searchCoffee" method="get">
             <div class="input-group">
