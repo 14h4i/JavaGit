@@ -35,6 +35,7 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
               </button>
               <a class="navbar-brand" href="/demo_war_exploded/menu.jsp">Menu</a>
           </div>
@@ -43,6 +44,7 @@
                   <li><a href="/demo_war_exploded/coffee">Coffee</a></li>
                   <li><a href="/demo_war_exploded/milktea">Milk Tea</a></li>
                   <li><a href="/demo_war_exploded/fruittea">Fruit Tea</a></li>
+                  <li><a href="/demo_war_exploded/agency?name=agency1">Agency</a></li>
               </ul>
           </div>
       </div>
