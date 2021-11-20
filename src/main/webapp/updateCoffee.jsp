@@ -84,66 +84,83 @@
     <div class="row">
         <div class="col-md-4 border-right">
             <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5"
-                                                                                         src="${updateCoffee.image}"
+                                                                                         src="${coffeeU.image}"
                                                                                          width="180"></div>
         </div>
-        <form action="/demo/updateCoffee" method="post">
         <div class="col-md-8">
-            <div class="p-3 py-5">
-                <div class="row mt-2">
-                    <%--                    <div class="col-md-6"><label>ID</label><input class="form-control" type="text" name="id" id="id"--%>
-                    <%--                                                                  value="<c:out value='${updateCoffee.id}' />" readonly/></div>--%>
-                    <div class="col-md-6"><label>NAME</label> <input type="text"
-                                                                     value="<c:out value='${updateCoffee.name}' />"
-                                                                     id="name"
-                                                                     class="form-control" name="name" required></div>
-                    <div class="col-md-6"><label>CODE</label> <input type="text"
-                                                                     value="<c:out value='${updateCoffee.code}' />"
-                                                                     id="code"
-                                                                     class="form-control" name="code" readonly></div>
-                </div>
-                <div class="row mt-3">
-
-                    <div class="col-md-6"><label>SIZE</label> <input type="text"
-                                                                     value="<c:out value='${updateCoffee.size}' />"
-                                                                     id="size"
-                                                                     class="form-control" name="size" readonly></div>
-                    <div class="col-md-6"><label>PRICE</label> <input type="text"
-                                                                      value="<c:out value='${updateCoffee.price}' />"
-                                                                      id="price"
-                                                                      class="form-control" name="price" required></div>
-                </div>
-                <div class="row mt-3">
-
-                    <div class="col-md-6"><label>grCoffee</label> <input type="text"
-                                                                         value="<c:out value='${updateCoffee.grCoffee}' />"
-                                                                         id="grCoffee"
-                                                                         class="form-control" name="grCoffee" required>
+            <form action="updateCoffee" method="post">
+                <div class="p-3 py-5">
+                    <div class="row mt-3">
+                        <div class="col-md-6"><label>ID</label><input class="form-control" type="text" name="id" id="id"
+                                                                      value="<c:out value='${coffeeU.id}' />"
+                                                                      readonly/></div>
+                        <div class="col-md-6"><label>IMAGE</label><input class="form-control" type="text" name="image" id="image"
+                                                                      value="<c:out value='${coffeeU.image}' />"
+                                                                      readonly/></div>
                     </div>
-                    <div class="col-md-6"><label>sugar</label> <input type="text"
-                                                                          value="<c:out value='${updateCoffee.sugar}' />"
+                    <div class="row mt-2">
+                        <div class="col-md-6"><label>NAME</label> <input type="text"
+                                                                         value="<c:out value='${coffeeU.name}' />"
+                                                                         id="name"
+                                                                         class="form-control" name="name" required>
+                        </div>
+                        <div class="col-md-6"><label>CODE</label> <input type="text"
+                                                                         value="<c:out value='${coffeeU.code}' />"
+                                                                         id="code"
+                                                                         class="form-control" name="code" readonly>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+
+                        <div class="col-md-6"><label>SIZE</label> <input type="text"
+                                                                         value="<c:out value='${coffeeU.size}' />"
+                                                                         id="size"
+                                                                         class="form-control" name="size" readonly>
+                        </div>
+                        <div class="col-md-6"><label>PRICE</label> <input type="text"
+                                                                          value="<c:out value='${coffeeU.price}' />"
+                                                                          id="price"
+                                                                          class="form-control" name="price" required>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+
+                        <div class="col-md-6"><label>grCoffee</label> <input type="text"
+                                                                             value="<c:out value='${coffeeU.grCoffee}' />"
+                                                                             id="grCoffee"
+                                                                             class="form-control" name="grCoffee"
+                                                                             required>
+                        </div>
+                        <div class="col-md-6"><label>sugar</label> <input type="text"
+                                                                          value="<c:out value='${coffeeU.sugar}' />"
                                                                           id="sugar"
                                                                           class="form-control" name="sugar"
                                                                           required></div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-6"><label>freshMilk</label> <input type="text"
-                                                                          value="<c:out value='${updateCoffee.freshMilk}' />"
-                                                                          id="freshMilk"
-                                                                          class="form-control" name="freshMilk"
-                                                                          required></div>
-                    <div class="col-md-6"><label>condensedMilk</label> <input type="text"
-                                                                              value="<c:out value='${updateCoffee.condensedMilk}' />"
-                                                                              id="condensedMilk"
-                                                                              class="form-control" name="price"
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6"><label>freshMilk</label> <input type="text"
+                                                                              value="<c:out value='${coffeeU.freshMilk}' />"
+                                                                              id="freshMilk"
+                                                                              class="form-control" name="freshMilk"
                                                                               required></div>
+                        <div class="col-md-6"><label>condensedMilk</label> <input type="text"
+                                                                                  value="<c:out value='${coffeeU.condensedMilk}' />"
+                                                                                  id="condensedMilk"
+                                                                                  class="form-control"
+                                                                                  name="condensedMilk"
+                                                                                  required></div>
+                    </div>
+                    <br>
+                    <div class="mt-5 text-right">
+                        <button onclick="Alert()" class="btn btn-success" type="submit">Save</button>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                 </div>
-                <div class="mt-5 text-right">
-                    <button onclick="Alert()" class="btn btn-primary profile-button" type="submit">Save</button>
-                </div>
-            </div>
+            </form>
         </div>
-        </form>
     </div>
 </div>
 </body>

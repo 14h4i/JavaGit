@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="css/agency.css" rel="stylesheet" type="text/css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body, html {
@@ -73,14 +75,14 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/demo/menu.jsp">Menu</a>
+            <a class="navbar-brand" href="/demo_war_exploded/menu.jsp">Menu</a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="/demo/coffee">Coffee</a></li>
-            <li><a href="/demo/milktea">Milk Tea</a></li>
-            <li><a href="/demo/fruittea">Fruit Tea</a></li>
-            <li><a href="/demo/agency?name=agency1">Agency</a></li>
-            <li><a href="/demo/ingredient">Ingredient</a></li>
+            <li class="active"><a href="/demo_war_exploded/coffee">Coffee</a></li>
+            <li><a href="/demo_war_exploded/milktea">Milk Tea</a></li>
+            <li><a href="/demo_war_exploded/fruittea">Fruit Tea</a></li>
+            <li><a href="/demo_war_exploded/agency?name=agency1">Agency</a></li>
+            <li><a href="/demo_war_exploded/ingredient">Ingredient</a></li>
         </ul>
         <form class="navbar-form navbar-right" action="searchCoffee" method="get">
             <div class="input-group">
@@ -100,6 +102,16 @@
         <p>And I'm a Drinker and Thinker</p>
     </div>
 </div>
+<br>
+<div class="container-fluid" style="margin-left: 50px">
+    <div class="navbar-header">
+        <h2><b>List Of Coffee</b></h2>
+    </div>
+    <ul class="nav navbar-nav" style="margin-left: 10px">
+        <a href="addCoffee.jsp">Add New Item</a>
+    </ul>
+</div>
+<br>
 <div class="container">
     <table class="table table-striped">
 
@@ -114,7 +126,7 @@
             <th>FRESH MILK(ML)</th>
             <th>CONDENSED MILK(ML)</th>
             <th>SUGAR(ML)</th>
-            <th>EDIT</th>
+            <th>ACTIONS</th>
         </tr>
         </thead>
         <form action="/coffee" method="get">
@@ -132,8 +144,12 @@
                     <td>${x.condensedMilk}</td>
                     <td>${x.sugar}</td>
                     <td>
-                        <button type="button" onclick="DeleteFunction(${x.id})" class="btn btn-danger">DELETE</button>
-                        <button type="button" onclick="SelectByID(${x.id})" class="btn btn-success">UPDATE</button>
+                        <button type="button" onclick="DeleteFunction(${x.id})" class="btn btn-danger">
+                            <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+                        </button>
+                        <button type="button" onclick="SelectFunction(${x.id})" class="btn btn-success">
+                            <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+                        </button>
                     </td>
                 </tr>
             </c:forEach>
@@ -154,8 +170,12 @@
                     <td>${x.condensedMilk}</td>
                     <td>${x.sugar}</td>
                     <td>
-                        <button type="button" onclick="DeleteFunction(${x.id})" class="btn btn-danger">DELETE</button>
-                        <button type="button" onclick="SelectByID(${x.id})" class="btn btn-success">UPDATE</button>
+                        <button type="button" onclick="DeleteFunction(${x.id})" class="btn btn-danger">
+                            <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+                        </button>
+                        <button type="button" onclick="SelectFunction(${x.id})" class="btn btn-success">
+                            <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+                        </button>
                     </td>
                 </tr>
             </c:forEach>
@@ -168,7 +188,7 @@
 <script>
     function DeleteFunction(id) {
         $.ajax({
-            url: '/demo/coffee?sid=' + id,
+            url: '/demo_war_exploded/coffee?sid=' + id,
             dataType: 'text',
             type: 'DELETE',
             async: true,
@@ -188,9 +208,9 @@
     }
 </script>
 <script>
-    function SelectByID(id) {
+    function SelectFunction(id) {
         $.ajax({
-            url: '/demo/updateCoffee?sid=' + id,
+            url: '/demo_war_exploded/updateCoffee?sid=' + id,
             dataType: 'text',
             type: 'GET',
             async: true,
@@ -199,7 +219,7 @@
                     alert(404);
                 },
                 200: function (response) {
-                    window.location.href = "/demo/updateCoffee?sid=" + id
+                    window.location.href='/demo_war_exploded/updateCoffee?sid=' + id
                 }
             },
             error: function (jqXHR, status, errorThrown) {

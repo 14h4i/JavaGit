@@ -32,6 +32,21 @@ public class CoffeeServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        try {
+            String code = request.getParameter("code");
+            String image = request.getParameter("image");
+            String name = request.getParameter("name");
+            String size = request.getParameter("size");
+            String price = request.getParameter("price");
+            String grCoffee = request.getParameter("grCoffee");
+            String freshMilk = request.getParameter("freshMilk");
+            String condensedMilk = request.getParameter("condensedMilk");
+            String sugar = request.getParameter("sugar");
+            coffeeDAO.insertCoffee(code, image, name, size, price, grCoffee, freshMilk, condensedMilk, sugar);
+            response.sendRedirect("coffee");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) {
@@ -43,4 +58,5 @@ public class CoffeeServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
+
 }

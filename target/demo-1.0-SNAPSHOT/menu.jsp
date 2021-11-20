@@ -45,6 +45,7 @@
                   <li><a href="/demo_war_exploded/milktea">Milk Tea</a></li>
                   <li><a href="/demo_war_exploded/fruittea">Fruit Tea</a></li>
                   <li><a href="/demo_war_exploded/agency?name=agency1">Agency</a></li>
+                  <li><a href="/demo_war_exploded/ingredient">Ingredient</a></li>
               </ul>
           </div>
       </div>

@@ -73,14 +73,14 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/demo/menu.jsp">Menu</a>
+            <a class="navbar-brand" href="/demo_war_exploded/menu.jsp">Menu</a>
         </div>
         <ul class="nav navbar-nav">
-            <li><a href="/demo/coffee">Coffee</a></li>
-            <li><a href="/demo/milktea">Milk Tea</a></li>
-            <li><a href="/demo/fruittea">Fruit Tea</a></li>
-            <li><a href="/demo/agency?name=agency1">Agency</a></li>
-            <li class="active"><a href="/demo/ingredient">Ingredient</a></li>
+            <li><a href="/demo_war_exploded/coffee">Coffee</a></li>
+            <li><a href="/demo_war_exploded/milktea">Milk Tea</a></li>
+            <li><a href="/demo_war_exploded/fruittea">Fruit Tea</a></li>
+            <li><a href="/demo_war_exploded/agency?name=agency1">Agency</a></li>
+            <li class="active"><a href="/demo_war_exploded/ingredient">Ingredient</a></li>
         </ul>
         <form class="navbar-form navbar-right" action="/action_page.php">
             <div class="input-group">

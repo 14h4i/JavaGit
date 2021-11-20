@@ -21,7 +21,7 @@ public class ServletCoffeeUpdate extends HttpServlet {
         try {
             String id = request.getParameter("sid");
             CoffeeModel coffeeModel = coffeeDAO.getCoffeeByID(id);
-            request.setAttribute("updateCoffee", coffeeModel);
+            request.setAttribute("coffeeU", coffeeModel);
             request.getRequestDispatcher("updateCoffee.jsp").forward(request, response);
         } catch (Exception e) {
             e.printStackTrace();
@@ -42,7 +42,7 @@ public class ServletCoffeeUpdate extends HttpServlet {
             String condensedMilk = request.getParameter("condensedMilk");
             String sugar = request.getParameter("sugar");
             coffeeDAO.updateCoffee(id, code, image, name, size, price, grCoffee, freshMilk, condensedMilk, sugar);
-            response.sendRedirect("/demo_war_exploded/coffee");
+            response.sendRedirect("coffee");
         } catch (Exception e) {
             e.printStackTrace();
         }

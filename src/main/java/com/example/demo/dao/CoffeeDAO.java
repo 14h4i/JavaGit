@@ -121,4 +121,20 @@ public class CoffeeDAO {
             statement.executeUpdate();
         }
     }
+    public void insertCoffee(String code, String image, String name, String size, String price, String grCoffee, String freshMilk, String condensedMilk, String sugar) throws Exception {
+        String sql = "INSERT INTO coffee(code,image,name,size,price,grCoffee,freshMilk,condensedMilk,sugar) VALUES(?,?,?,?,?,?,?,?,?)";
+        try (Connection connection = getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql)) {
+            statement.setString(1, code);
+            statement.setString(2, image);
+            statement.setString(3, name);
+            statement.setString(4, size);
+            statement.setString(5,price);
+            statement.setString(6,grCoffee);
+            statement.setString(7,freshMilk);
+            statement.setString(8,condensedMilk);
+            statement.setString(9,sugar);
+            statement.executeUpdate();
+        }
+    }
 }

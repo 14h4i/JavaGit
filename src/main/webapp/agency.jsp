@@ -18,14 +18,14 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/demo/menu.jsp">Menu</a>
+            <a class="navbar-brand" href="/demo_war_exploded/menu.jsp">Menu</a>
         </div>
         <ul class="nav navbar-nav">
-            <li><a href="/demo/coffee">Coffee</a></li>
-            <li><a href="/demo/milktea">Milktea</a></li>
-            <li><a href="/demo/fruittea">Fruittea</a></li>
-            <li class="active"><a href="/demo/agency?name=agency1">Agency</a></li>
-            <li><a href="/demo/ingredient">Ingredient</a></li>
+            <li><a href="/demo_war_exploded/coffee">Coffee</a></li>
+            <li><a href="/demo_war_exploded/milktea">Milktea</a></li>
+            <li><a href="/demo_war_exploded/fruittea">Fruittea</a></li>
+            <li class="active"><a href="/demo_war_exploded/agency?name=agency1">Agency</a></li>
+            <li><a href="/demo_war_exploded/ingredient">Ingredient</a></li>
         </ul>
         <form class="navbar-form navbar-right" action="/action_page.php">
             <div class="input-group">
@@ -48,12 +48,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-2">
-            <h2>About Me</h2>
-            <h5>Photo of me:</h5>
-            <div class="fakeimg">Fake Image</div>
-            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-            <h3>List agencies</h3>
-            <p>Agencies under your management</p>
+            <h3>List Agencies</h3>
             <ul class="nav nav-pills nav-stacked">
                 <li class=${agency=="agency1" ?"active":""}><a href="agency?name=agency1">Agency 1</a></li>
                 <li class=${agency=="agency2" ?"active":""}><a href="agency?name=agency2">Agency 2</a></li>
